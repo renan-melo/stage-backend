@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg p-0 py-3 py-md-2 py-md-1">
     <div class="container-fluid mr-8 justify-content-between align-items-center">
-      <a class="navbar-brand ml-4 col-2" href="#">
+      <a class="navbar-brand ml-4 mx-0" href="#">
         <h5 class="m-0 align-middle">GameState</h5>
         </a>
       <button
@@ -13,38 +13,30 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse col-10 justify-content-between" id="navbarSite">
+      <div class="collapse navbar-collapse col-12 col-lg-9 p-0 justify-content-between align-items-center" id="navbarSite">
 
-        <div class="col-9">
+        <div class="col-12 col-lg-9">
         <ul  class="row p-2 justify-content-between p-0 m-0">
-          <li v-for="item in menuItens" :key="item.id" class="nav-item  col-lg-2 ">
+          <li v-for="item in menuItens" :key="item.id" class="nav-item p-0 py-2 col-lg-2 ">
             <a class="nav-link " :href="item.url">{{item.name}}</a>
           </li>
         </ul>
         </div>
 
-<div class="col-lg-2">
-        <ul  class="row p-2 justify-content-between p-0 m-0">
-          <li v-for="item in midia" :key="item.id" class="p-0 m-0 col-3">
-             <a  :href="item.url">
-              <i :class="'fab fa-'+item.name" ></i>
-            </a>
-          </li>
-         
-        </ul>
- </div>
-     
+          <SocialMedia class="col-12 col-lg-2"/>
 
-
-        
       </div>
     </div>
   </nav>
 </template>
 
 <script>
+import SocialMedia from './SocialMedia'
 export default {
   name: "navbar",
+  components:{
+    SocialMedia
+  },
   data(){
     return{
       menuItens:[        
@@ -70,26 +62,6 @@ export default {
           url:'#'
         },
       ],
-      
-      midia:[
-      {
-        id:6,
-        name:'facebook',
-        url:'https://pt-br.facebook.com/'
-      },{
-        id:7,
-        name:'twitter',
-        url:'https://twitter.com/login?lang=pt'
-      },{
-        id:8,
-        name:'youtube',
-        url:'https://www.youtube.com/?hl=pt&gl=BR'
-      },{
-        id:9,
-        name:'instagram',
-        url:'https://www.instagram.com/?hl=pt-br',
-      },
-      ]
     }
   }
 };
@@ -112,50 +84,6 @@ export default {
   color: rgb(255, 255, 255);
   background-color: rgb(3, 3, 3);
   
-}
-i.fab {
-  font-size: 25px;
-  
-}
-.fa-facebook {
-  color:rgb(255, 255, 255);
-  
-}
-.fa-facebook:hover {
-  color: rgb(77, 75, 197);
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
-}
-.fa-instagram {
-  color:rgb(180, 175, 175);
-}
-.fa-instagram:hover {
-  color: rgba(206, 59, 162, 0.733);
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
-}
-.fa-facebook {
-  color:rgb(180, 175, 175);
-}
-.fa-twitter {
-  color:rgb(180, 175, 175);
-}
-.fa-twitter:hover {
-  color: rgb(0, 148, 247);
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
-}
-.fa-youtube {
-  color:rgb(180, 175, 175);
-}
-.fa-youtube:hover {
-  color: rgba(252, 4, 4, 0.733);
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
 }
 
 .navbar-brand:hover {

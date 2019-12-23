@@ -5,7 +5,7 @@
     <menusearch/>
     <noticiahome/>
     <homeVideo/>
-    <credit/>
+    <Footer/>
 
   </div>
 </template>
@@ -19,7 +19,7 @@ import menusob from './components/menusob.vue'
 import menusearch from './components/menusearch.vue'
 import noticiahome from './components/noticiahome.vue'
 import homeVideo from './components/homeVideo.vue'
-import credit from './components/credit.vue'
+import Footer from './components/Footer.vue'
 //import Vue from 'vue'
 
 
@@ -32,7 +32,7 @@ export default {
    menusearch,
    noticiahome,
    homeVideo,
-   credit
+   Footer
   }
 }
 </script>
