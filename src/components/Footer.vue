@@ -20,52 +20,7 @@ export default {
 </script>
 
 <style scoped>
-i.fab{
-  font-size: 25px;
-  
-}
-.fa-facebook {
-  color:rgb(255, 255, 255);
-}
-.fa-facebook:hover {
-  color: rgb(77, 75, 197);
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
-  
-}
 
-.fa-instagram {
-  color:rgb(255, 255, 255);
-}
-.fa-instagram:hover {
-  color: rgba(206, 59, 162, 0.733);
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
-}
-.fa-twitter {
-  color:rgb(255, 255, 255);
-}
-.fa-twitter:hover {
-  color: rgb(0, 148, 247);
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
-}
-.fa-youtube {
-  color:rgb(255, 255, 255);
-}
-.fa-youtube:hover {
-  color: rgba(252, 4, 4, 0.733);
-  -webkit-transform: scale(1.3);
-  -ms-transform: scale(1.3);
-  transform: scale(1.3);
-}
-
-.row{
-  list-style-type: none;
-}
 
 
 </style>

@@ -1,6 +1,6 @@
 <template>
 
-    <ul id="socialMedia" class="row list-group-flush justify-content-center align-items-center p-0 m-0">
+    <ul id="socialMedia" class="row justify-content-center align-items-center p-0 m-0">
         <li v-for="(item,index) in media" :key="index" class="px-1 m-0" >
             <a  :href="item.url">
                 <i :class="'fab fa-'+item.icon" @mouseover="alterColor($event,item.color,true)" @mouseout="alterColor($event,item.color,false)" ></i>
@@ -49,6 +49,11 @@ export default {
 
    #socialMedia li i{
        font-size: 16pt;
+       color: #fff;
+   } 
+
+   #socialMedia ul {
+      list-style-type: none;
    } 
 
    #socialMedia li i:hover{
