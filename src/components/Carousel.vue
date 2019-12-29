@@ -44,7 +44,7 @@ export default {
     return{
       items:[
         {
-          src:"ff",
+          src:"f",
           title:"Passear com a familia é bom demais",
           subtitle:"Depois de um belo passeio, nada melhor que brocar um Xtudão!!!",
           class:"active"

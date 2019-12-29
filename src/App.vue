@@ -1,41 +1,8 @@
 <template>
   <div id="app">
-    <navbar/>
-    <Carousel/>
-    <menusearch/>
-    <noticiahome/>
-    <homeVideo/>
-    <Footer/>
-
+    <router-view/>
   </div>
 </template>
-
- 
-
-
-<script>
-import navbar from './components/navbar.vue'
-import Carousel from './components/Carousel.vue'
-import menusearch from './components/menusearch.vue'
-import noticiahome from './components/noticiahome.vue'
-import homeVideo from './components/homeVideo.vue'
-import Footer from './components/Footer.vue'
-//import Vue from 'vue'
-
-
-
-export default {
-  name: 'app',
-  components: {
-   navbar,
-   Carousel,
-   menusearch,
-   noticiahome,
-   homeVideo,
-   Footer
-  }
-}
-</script>
 
 <style>
 

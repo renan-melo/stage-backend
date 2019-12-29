@@ -18,7 +18,8 @@
         <div class="col-12 col-lg-9">
         <ul  class="row p-2 justify-content-between p-0 m-0">
           <li v-for="item in menuItens" :key="item.id" class="nav-item p-0 py-2 col-lg-2 ">
-            <a class="nav-link " :href="item.url">{{item.name}}</a>
+            
+            <router-link class="nav-link" :to="item.url" >{{item.name}}</router-link>
           </li>
         </ul>
         </div>
@@ -43,23 +44,23 @@ export default {
         {
           id:1,
           name:'jogos'.toUpperCase(),
-          url:'#'
+          url:'/jogos'
         },{
           id:2,
           name:'analise'.toUpperCase(),
-          url:'#'
+          url:'/analise'
         },{
           id:3,
           name:'videos'.toUpperCase(),
-          url:'#'
+          url:'/videos'
         },{
           id:4,
           name:'especiais'.toUpperCase(),
-          url:'#'
+          url:'/especiais'
         },{
           id:5,
-          name:'eSPORTS'.toUpperCase(),
-          url:'#'
+          name:'mobile'.toUpperCase(),
+          url:'/mobile'
         },
       ],
     }

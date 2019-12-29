@@ -8,20 +8,21 @@
         <hr>
       </h1>
 <div class="d-none d-lg-block">
-      <!-- <aside class="lateral col ">
+
+      <aside class="lateral col ">
 <h1>Outras Notícias</h1>
 <h2>Vídeo mais recente</h2>
 
 <h2>Novidades no Glass</h2>
 <p>O Google enfim revelou as especificações completas do Google Glass.</p>
 
-<p>Além da surpresa do áudio, a tela montada a frente do olholçlççlçlçlçl do usuário também chamou atenção.a tela montada a frente do olho do usuário também chamou atenção.  a tela rio também chamou atenção.lémda surpresa do áudio, a tela montada a frente do olho do usuário também chamou atenção.lém da surpresa do áudio, a tela mon009o. </P>
-</aside> -->  
+<p>Além da surpresa do áudio, a tem chamou atençãote do olho do usuário também chamou atenção.  a telbmmhmga rio também chamou atenção.lémda surpresa do áudio, a tela montada a frente do olho do usuário também chamou atenção.lém da surpresa do áudio, a tela mon009o. </P>
+</aside>  
 </div>
   
  
       <Card :items="items"/>
-     
+         
      <br>
 
       <br><br> 
@@ -55,14 +56,28 @@ export default {
     return{
       items:[
         {
+        id:1,
+        title:"fala memo",
+        subtitle:"fala memo",
+        text:"fala memo nois",
+        link: "https://www.google.com.br/"
+        },{
+        id:2,
         title:"fala memo",
         subtitle:"fala memo",
         text:"fala memo nois"
         },{
+        id:3,
         title:"fala memo",
         subtitle:"fala memo",
         text:"fala memo nois"
         },{
+        id:4,
+        title:"fala memo",
+        subtitle:"fala memo",
+        text:"fala memo nois"
+        },{
+        id:5,
         title:"fala memo",
         subtitle:"fala memo",
         text:"fala memo nois"
@@ -98,8 +113,9 @@ export default {
 				padding: 5px;
 				}
 
-.bg{
-  background-color:rgb(255, 255, 255);
+.item {
+  background-color:rgb(219, 4, 4);
+  
 }
 .fr{
   background-color:rgb(255, 174, 0);
@@ -108,5 +124,7 @@ export default {
 .images {
 border-radius: 15px;
 }
+
+
 
 </style>
