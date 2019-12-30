@@ -48,17 +48,17 @@ export default {
           name:'home'.toUpperCase(),
           path:'/'
         },{
-          name:'news'.toUpperCase(),
-          url:'/news'
+          name:'novidades'.toUpperCase(),
+          path:'/news'
         },{
           name:'games'.toUpperCase(),
-          url:'/games'
+          path:'/games'
         },{
           name:'nostalgia'.toUpperCase(),
           path:'/nostalgia'
         },{
-          name:'specials'.toUpperCase(),
-          url:'/specials'
+          name:'especial'.toUpperCase(),
+          path:'/specials'
         }
       ],
     }

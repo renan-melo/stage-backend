@@ -2,7 +2,6 @@
 
 <!-- Page Content -->
 <div class="container-fluid">
-<div class="container ">
 
   <!-- Portfolio Item Heading -->
   <h1 class="my-4 text-center text-white">Trailers
@@ -65,7 +64,7 @@
   </div>
   <!-- /.row -->
 
-</div>
+
 </div>
 
 </template>
@@ -85,9 +84,6 @@ export default {
 
 .container-fluid {
   background-color:  rgb(0, 0, 0);
-}
-.container{
-  background-color:  rgb(0, 0, 0)
 }
 
 </style>
