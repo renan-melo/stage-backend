@@ -17,7 +17,7 @@
 
         <div class="col-12 col-lg-9">
         <ul  class="row p-2 justify-content-between p-0 m-0">
-          <li v-for="item in menuItens" :key="item.id" class="nav-item p-0 py-2 col-lg-2 ">
+          <li v-for="item in menuItens" :key="item.id" class="nav-item p-0 py-2 col-lg-2 text-center">
             
             <router-link class="nav-link" :to="item.url" >{{item.name}}</router-link>
           </li>
@@ -34,34 +34,29 @@
 <script>
 import SocialMedia from './SocialMedia'
 export default {
-  name: "navbar",
+  name: "NavBar",
   components:{
     SocialMedia
   },
   data(){
     return{
-      menuItens:[        
+      menuItens:[
         {
-          id:1,
+          name:'home'.toUpperCase(),
+          url:'/'
+        },{
+          name:'novidades'.toUpperCase(),
+          url:'/novidades'
+        },{
           name:'jogos'.toUpperCase(),
           url:'/jogos'
         },{
-          id:2,
-          name:'analise'.toUpperCase(),
-          url:'/analise'
+          name:'nostalgia'.toUpperCase(),
+          url:'/nostalgia'
         },{
-          id:3,
-          name:'videos'.toUpperCase(),
-          url:'/videos'
-        },{
-          id:4,
           name:'especiais'.toUpperCase(),
           url:'/especiais'
-        },{
-          id:5,
-          name:'mobile'.toUpperCase(),
-          url:'/mobile'
-        },
+        }
       ],
     }
   }

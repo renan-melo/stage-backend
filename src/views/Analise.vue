@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <navbar/>
     <!-- <Carousel/> -->
     <menusearch/>
     <noticiahome/>
@@ -14,7 +13,6 @@
 
 
 <script>
-import navbar from '../components/navbar'
 // import Carousel from '../components/Carousel.vue'
 import menusearch from '../components/menusearch.vue'
 import noticiahome from '../components/noticiahome.vue'
@@ -25,9 +23,8 @@ import Footer from '../components/Footer.vue'
 
 
 export default {
-  name: 'app',
+  name: 'Analise',
   components: {
-   navbar,
   //  Carousel,
    menusearch,
    noticiahome,

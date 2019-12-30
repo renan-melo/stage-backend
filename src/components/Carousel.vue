@@ -12,7 +12,7 @@
         <div v-for="(item,index) in items" :key="index" :class="'carousel-item ' + item.class" >
 
           <!--<img :src="item.src" class="img-fluid d-block"/>-->
-           <img :src="`../assets/${items.src}.jpg`" class="img-fluid d-block"/>
+           <img :src="item.src" class="img-fluid d-block"/>
 
           <div class="carousel-content-title carousel-caption d-none d-md-block">
             <h3>{{item.title}}</h3>
@@ -44,25 +44,25 @@ export default {
     return{
       items:[
         {
-          src:"f",
-          title:"Passear com a familia é bom demais",
-          subtitle:"Depois de um belo passeio, nada melhor que brocar um Xtudão!!!",
-          class:"active"
+          src:require('../assets/logo.png'),
+          title:'Passear com a familia é bom demais',
+          subtitle:'Depois de um belo passeio, nada melhor que brocar um Xtudão!!!',
+          class:'active'
         },{
-          src:"f",
-          title:"Passear com a familia é bom demais",
-          subtitle:"Depois de um belo passeio, nada melhor que brocar um Xtudão!!!",
-          class:""
+          src:require('../assets/logo.png'),
+          title:'Passear com a familia é bom demais',
+          subtitle:'Depois de um belo passeio, nada melhor que brocar um Xtudão!!!',
+          class:''
         },{
-          src:"f",
-          title:"Passear com a familia é bom demais",
-          subtitle:"Depois de um belo passeio, nada melhor que brocar um Xtudão!!!",
-          class:""
+          src:require('../assets/logo.png'),
+          title:'Passear com a familia é bom demais',
+          subtitle:'Depois de um belo passeio, nada melhor que brocar um Xtudão!!!',
+          class:''
         },{
-          src:"f",
-          title:"Passear com a familia é bom demais",
-          subtitle:"Depois de um belo passeio, nada melhor que brocar um Xtudão!!!",
-          class:""
+          src:require('../assets/logo.png'),
+          title:'Passear com a familia é bom demais',
+          subtitle:'Depois de um belo passeio, nada melhor que brocar um Xtudão!!!',
+          class:''
         },
       ]
     }
