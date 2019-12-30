@@ -1,6 +1,6 @@
 <template>
 
-    <ul id="socialMedia" class="row justify-content-center align-items-center p-0 m-0">
+    <ul id="socialMedia" class="row justify-content-center align-items-center p-0 m-0 text-muted">
         <li v-for="(item,index) in media" :key="index" class="px-1 m-0" >
             <a  :href="item.url">
                 <i :class="'fab fa-'+item.icon" @mouseover="alterColor($event,item.color,true)" @mouseout="alterColor($event,item.color,false)" ></i>
@@ -15,8 +15,7 @@ export default {
     name:'SocialMedia',
     methods:{
         alterColor(event,color,isActive){   
-            const timerTransition = 0.2
-            isActive ? event.target.setAttribute("style", `color: ${color};transition:color ${timerTransition}s`):event.target.setAttribute("style", `color:#fff; transition:color ${timerTransition}s`)
+            isActive ? event.target.setAttribute("style", `color: ${color};`):event.target.removeAttribute("style")
         }
     },
     data() {
@@ -25,19 +24,19 @@ export default {
       {
         icon:'facebook',
         url:'https://pt-br.facebook.com/',
-        color:'#4d4bc5'
+        color:'#4064ad'
       },{
         icon:'twitter',
         url:'https://twitter.com/login?lang=pt',
-        color:'#0094f7'
+        color:'#29A4DA'
       },{
         icon:'youtube',
         url:'https://www.youtube.com/?hl=pt&gl=BR',
-        color:'#fc0404bb'
+        color:'#F70019'
       },{
         icon:'instagram',
         url:'https://www.instagram.com/?hl=pt-br',
-        color:'#ce3ba2bb'
+        color:'#CF3587'
       },
       ]
     }
@@ -49,7 +48,8 @@ export default {
 
    #socialMedia li i{
        font-size: 16pt;
-       color: #fff;
+       color: rgba(255, 255, 255, 0.37);
+       transition: transform .2s, color .2s;
    } 
 
    #socialMedia ul {
@@ -58,7 +58,6 @@ export default {
 
    #socialMedia li i:hover{
      transform: scale(1.2);
-     transition: transform .2s;
    }
 
 </style>

@@ -1,38 +1,41 @@
 <template>
-  <nav class="navbar navbar-expand-lg p-0 py-3 py-md-2 py-md-1">
+
+  <nav id="navbar" class="navbar navbar-expand-lg p-0 py-3 py-md-2 py-md-1">
+
     <div class="container-fluid mr-8 justify-content-between align-items-center">
-      <a class="navbar-brand ml-4 mx-0" href="#">
+      
+      <a class="navbar-brand ml-4 mx-0 text-white" href="#">
         <h5 class="m-0 align-middle">GameState</h5>
-        </a>
-      <button
-        class="navbar-toggler navbar-dark"
-        type="button "
-        data-toggle="collapse"
-        data-target="#navbarSite"
-      >
+      </a>
+
+      <button class="navbar-toggler navbar-dark" type="button " data-toggle="collapse"  data-target="#nav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse col-12 col-lg-9 p-0 justify-content-between align-items-center" id="navbarSite">
+      <div class="collapse navbar-collapse col-12 col-lg-9 p-0 justify-content-between align-items-center" id="nav">
 
         <div class="col-12 col-lg-9">
-        <ul  class="row p-2 justify-content-between p-0 m-0">
-          <li v-for="item in menuItens" :key="item.id" class="nav-item p-0 py-2 col-lg-2 text-center">
-            
-            <router-link class="nav-link" :to="item.url" >{{item.name}}</router-link>
-          </li>
-        </ul>
+          <ul class="row p-2 justify-content-between p-0 m-0">
+            <li v-for="(item,index) in items" :key="index" class="nav-item nav-item-link p-0 py-2">
+                  <router-link class="nav-link link text-left px-0" :to="item.path" >{{item.name}}</router-link>
+            </li>
+          </ul>
         </div>
 
-          <SocialMedia class="col-12 col-lg-2"/>
+        <SocialMedia class="col-12 col-lg-2"/>
 
       </div>
+
     </div>
+
   </nav>
+
 </template>
 
 <script>
+
 import SocialMedia from './SocialMedia'
+
 export default {
   name: "NavBar",
   components:{
@@ -40,10 +43,10 @@ export default {
   },
   data(){
     return{
-      menuItens:[
+      items:[
         {
           name:'home'.toUpperCase(),
-          url:'/'
+          path:'/'
         },{
           name:'news'.toUpperCase(),
           url:'/news'
@@ -52,7 +55,7 @@ export default {
           url:'/games'
         },{
           name:'nostalgia'.toUpperCase(),
-          url:'/nostalgia'
+          path:'/nostalgia'
         },{
           name:'specials'.toUpperCase(),
           url:'/specials'
@@ -61,42 +64,59 @@ export default {
     }
   }
 };
+
 </script>
 
 <style scoped>
-.navbar {
-  background-color: rgb(0, 0, 0);
-  
-}
-.row{
-  list-style-type: none;
 
-}
-
-.container-fluid {
+#navbar{
   background-color: rgb(0, 0, 0);
 }
-.navbar-brand {
-  color: rgb(255, 255, 255);
-  background-color: rgb(3, 3, 3);
-  
+
+#navbar .navbar-brand {
+  transition: transform .5s, color .5s;
 }
 
-.navbar-brand:hover {
-  color: rgba(243, 111, 111, 0.932);
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
+#navbar .navbar-brand:hover {
+  color: #f36f6fee !important;
   transform: scale(1.1);
 }
 
-.nav-link{
-  color: rgba(241, 228, 228, 0.932);
-  
-}
- .nav-link:hover {
-  color: rgba(161, 156, 156, 0.932); 
-  
+#navbar ul{
+  list-style-type: none;
 }
 
+#navbar .link{
+  color: #fff;
+  outline: none;
+}
+
+#navbar .link:hover{
+  color: turquoise;
+  transition: color .3s;
+}
+
+#navbar .link::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    position: relative;
+    background: turquoise;
+    z-index: 1;
+    transition: width .3s ease-in-out;
+}
+
+#navbar .link:hover::after{
+    width: 100%;
+}
+
+.link:focus{
+    color: turquoise !important;
+}
+
+.link:focus::after{
+    width: 100% !important;
+}
 
 </style>
