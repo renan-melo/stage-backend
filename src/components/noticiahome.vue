@@ -8,16 +8,8 @@
         <hr>
       </h1>
 <div class="d-none d-lg-block">
-
-      <aside class="lateral col ">
-<h1>Outras Notícias</h1>
-<h2>Vídeo mais recente</h2>
-
-<h2>Novidades no Glass</h2>
-<p>O Google enfim revelou as especificações completas do Google Glass.</p>
-
-<p>Além da surpresa do áudio, a tem chamou atençãote do olho do usuário também chamou atenção.  a telbmmhmga rio também chamou atenção.lémda surpresa do áudio, a tela montada a frente do olho do usuário também chamou atenção.lém da surpresa do áudio, a tela mon009o. </P>
-</aside>  
+<LastNews/>
+ 
 </div>
   
  
@@ -39,10 +31,12 @@
 <script>
 
 import Card from './Card'
+import LastNews from './LastNews'
 export default {
   name: "noticiahome",
   components:{
-    Card
+    Card,
+    LastNews
   },
   methods:{
     load(){
