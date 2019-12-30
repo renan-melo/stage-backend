@@ -24,7 +24,7 @@ import Footer from '../components/Footer.vue'
 
 
 export default {
-  name: 'app',
+  name: 'Home',
   components: {
    Carousel,
    menusearch,

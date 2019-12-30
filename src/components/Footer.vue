@@ -1,10 +1,10 @@
 <template>
 
-  <footer id="Footer" class="container-fluid d-flex flex-column justify-content-center align-items-center py-4 bg-dark text-white-50">
+  <footer id="Footer" class=" container-fluid d-flex flex-column justify-content-center align-items-center py-4 bg-dark text-white-50">
       <div class="container text-center">
         <small>Copyright &copy; Renan Website Project</small>
       </div>
-      <SocialMedia class="my-2"/>
+      <SocialMedia class="footer my-2"/>
   </footer>
     
 </template>
@@ -21,6 +21,8 @@ export default {
 
 <style scoped>
 
-
+.footer{
+  list-style-type: none;
+}
 
 </style>

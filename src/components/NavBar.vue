@@ -45,17 +45,17 @@ export default {
           name:'home'.toUpperCase(),
           url:'/'
         },{
-          name:'novidades'.toUpperCase(),
-          url:'/novidades'
+          name:'news'.toUpperCase(),
+          url:'/news'
         },{
-          name:'jogos'.toUpperCase(),
-          url:'/jogos'
+          name:'games'.toUpperCase(),
+          url:'/games'
         },{
           name:'nostalgia'.toUpperCase(),
           url:'/nostalgia'
         },{
-          name:'especiais'.toUpperCase(),
-          url:'/especiais'
+          name:'specials'.toUpperCase(),
+          url:'/specials'
         }
       ],
     }

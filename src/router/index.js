@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Jogos from '../views/Jogos.vue'
-import Analise from '../views/Analise.vue'
-import Videos from '../views/Videos.vue'
-import Especiais from '../views/Especiais.vue'
+import Games from '../views/Games.vue'
+import News from '../views/News.vue'
+import Nostalgia from '../views/Nostalgia.vue'
+import Specials from '../views/Specials.vue'
 import Mobile from '../views/Mobile.vue'
 
 
@@ -17,24 +17,24 @@ const routes = [
     component: Home
   },
   {
-    path: '/jogos',
-    name: 'jogos',
-    component: Jogos
+    path: '/games',
+    name: 'games',
+    component: Games
   },
   {
-    path: '/analise',
-    name: 'analise',
-    component: Analise
+    path: '/news',
+    name: 'news',
+    component: News
   },
   {
-    path: '/videos',
-    name: 'videos',
-    component: Videos
+    path: '/nostalgia',
+    name: 'nostalgia',
+    component: Nostalgia
   },
   {
-    path: '/especiais',
-    name: 'especiais',
-    component: Especiais
+    path: '/specials',
+    name: 'specials',
+    component: Specials
   },{
     path: '/mobile',
     name: 'mobile',

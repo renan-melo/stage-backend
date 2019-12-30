@@ -1,26 +1,26 @@
 <template>
+  <div id="games">
 
-    
-<div class="layout container-fluid p-5">
-
-  <h1 class="text-center ">JOGOS</h1>
-
-             <Cardjogos :items="items"/>
-
-</div>
-
+    <div class="layout container-fluid p-5">
+      <h1 class="text-center ">JOGOS</h1>
+        <Cardgames :items="items"/>
+    </div>
+  </div>
+   
 </template>
 
-<script>
+ 
 
-import Cardgames from './Cardgames'
-export default {
-    name:'SocialMedia',
+
+<script>
+import Cardgames from '../components/Cardgames'
+  export default {
+    name: 'Games',
     components:{
       Cardgames
     },
     data() {
-    return{
+    return {
       items:[
         {
         id:1,
@@ -62,28 +62,10 @@ export default {
       ]
     }
     } 
-}
-
+  }
 </script>
 
-<style scoped>
+<style>
 
-   #socialMedia li i{
-       font-size: 16pt;
-       color: #fff;
-   } 
-
-   #socialMedia ul {
-      list-style-type: none;
-   } 
-
-   #socialMedia li i:hover{
-     transform: scale(1.2);
-     transition: transform .2s;
-   }
-
-   .layout {
-     background-color: rgba(0, 0, 0, 0.438);
-   }
 
 </style>
