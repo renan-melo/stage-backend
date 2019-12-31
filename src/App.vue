@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <NavBar/>
-    <router-view/>
-    <Footer/>
+    <NavBar />
+    <router-view />
+    <Footer />
   </div>
 </template>
 
 <script>
-import NavBar from './components/NavBar'
-import Footer from './components/Footer'
+import NavBar from "./components/commons/NavBar";
+import Footer from "./components/commons/Footer";
 export default {
   name: "app",
-  components:{
+  components: {
     NavBar,
     Footer
   }
@@ -19,5 +19,7 @@ export default {
 </script>
 
 <style>
-
+#app{
+  background: #EAEAEA; 
+}
 </style>

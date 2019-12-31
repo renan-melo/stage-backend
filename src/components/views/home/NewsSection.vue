@@ -1,15 +1,33 @@
 <template>
 
-  <div id="newsection" class="container">
+  <div id="newsection" class="container d-flex flex-row justify-content-center aling-content-center">
 
-    <h2 class="mt-5">Novidades</h2>
+    <div class="col-lg-11 d-flex flex-row justify-content-between aling-content-center">
 
-    <div class="row justify-content-between aling-content-start">
-      <Card :items="items" class="col-12 col-lg-8"/>
-      <LastNews class="d-none d-lg-block col-lg-3"/>
+    <div class="col-8 mt-5 mb-3">
+
+      <div class="container col-12 d-flex flex-row justify-content-between aling-content-center m-0">      
+        <router-link to="#" class="text-decoration-none">
+          <span class="d-inline news-link-cards text-uppercase font-weight-bold text-dark h4 align-bottom">
+            novidade
+          </span> 
+        </router-link>
+        <router-link to="#" class="text-decoration-none">
+          <span class="d-inline news-link-cards text-uppercase font-weight-bold text-muted text-decoration-none h6 align-bottom">
+            ver mais
+          </span> 
+        </router-link>
+      </div>
+
+      <Card :items="items" class="col-12"/>
+
+    </div>
+    <div class="col-4 mt-5 mb-3">
+      <LastNews class="d-none d-lg-block col-12"/>
     </div>
 
-    <button @click="load" class="btn btn-primary">Carregar mais</button> 
+ </div>
+    <!-- <button @click="load" class="btn btn-primary">Carregar mais</button>  -->
 
   </div>
 
@@ -17,8 +35,8 @@
 
 <script>
 
-import Card from './Card'
-import LastNews from './LastNews'
+import Card from '../../utils/Card'
+import LastNews from '../../utils/LastNews'
 
 export default {
   name: "NewsSection",
@@ -46,35 +64,35 @@ export default {
       items:[
         {
         id:1,
-        date:new Date().toLocaleString(),
+        date:new Date().toLocaleDateString(),
         src:'https://i.ytimg.com/vi/KaIeyKIwDz8/maxresdefault.jpg',
         title:"God of War 4",
         category:"PS4",
         path: '/games'
         },{
         id:2,
-        date:new Date().toLocaleString(),
+        date:new Date().toLocaleDateString(),
         src:'https://www.elitronicos.com.br/wp-content/uploads/2019/03/1-1024_6599.jpg',
         title:'Halo 5',
         category:'Xbox One',
         path: '/games'
         },{
         id:3,
-        date:new Date().toLocaleString(),
+        date:new Date().toLocaleDateString(),
         src:'https://i.ytimg.com/vi/Myz5XoSePXQ/maxresdefault.jpg',
         title:"Sonic",
         category:"Filmes",
         path: '/games'
         },{
         id:4,
-        date:new Date().toLocaleString(),
+        date:new Date().toLocaleDateString(),
         src:'https://observatoriodegames.bol.uol.com.br/wp-content/uploads/2019/12/keanu-reeves-cyberpunk-2077-johnny-silverhand.jpg',
         title:"Cyberpunk 2077",
         category:"Platafomas",
         path: '/games'
         },{
         id:5,
-        date:new Date().toLocaleString(),
+        date:new Date().toLocaleDateString(),
         src:'https://www.siliconera.com/wp-content/uploads/2019/12/hellblade-2-senuas-saga-800x400.jpg',
         title:"Hellblade 2",
         category:"Xbox One",
@@ -87,5 +105,7 @@ export default {
 </script>
 
 <style scoped>
-
+#newsection .news-link-cards:hover{
+  color:crimson !important;
+}
 </style>

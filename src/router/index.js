@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import Games from '../views/Games.vue'
-import News from '../views/News.vue'
-import Nostalgia from '../views/Nostalgia.vue'
-import Specials from '../views/Specials.vue'
-import Mobile from '../views/Mobile.vue'
+import Home from '../components/views/home/Home.vue'
+import Games from '../components/views/games/Games'
+import News from '../components/views/news/News.vue'
+import Nostalgia from '../components/views/nostalgia/Nostalgia.vue'
+import Specials from '../components/views/specials/Specials.vue'
+import Mobile from '../components/views/mobile/Mobile.vue'
 
 
 Vue.use(VueRouter)

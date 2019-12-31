@@ -1,12 +1,10 @@
 <template>
 
-  <nav id="navbar" class="navbar navbar-expand-lg p-0 py-3 py-md-2 py-md-1">
+  <nav id="navbar" class="navbar navbar-expand-lg">
 
     <div class="container-fluid mr-8 justify-content-between align-items-center">
       
-      <a class="navbar-brand ml-4 mx-0 text-white" href="#">
-        <h5 class="m-0 align-middle">GameState</h5>
-      </a>
+      <a class="navbar-brand ml-4 mx-0 py-3 text-white col-7 col-lg-2" href="#"></a>
 
       <button class="navbar-toggler navbar-dark" type="button " data-toggle="collapse"  data-target="#nav">
         <span class="navbar-toggler-icon"></span>
@@ -34,7 +32,7 @@
 
 <script>
 
-import SocialMedia from './SocialMedia'
+import SocialMedia from '../commons/SocialMedia'
 
 export default {
   name: "NavBar",
@@ -89,6 +87,7 @@ export default {
 #navbar .link{
   color: #fff;
   outline: none;
+  cursor: pointer;
 }
 
 #navbar .link:hover{
@@ -111,11 +110,18 @@ export default {
     width: 100%;
 }
 
-.link:focus{
+#navbar .navbar-brand{
+  background-image: url('../../assets/logo-negativo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+}
+
+#navbar .link:focus{
     color: turquoise !important;
 }
 
-.link:focus::after{
+#navbar .link:focus::after{
     width: 100% !important;
 }
 

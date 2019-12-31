@@ -52,8 +52,8 @@ export default {
        transition: transform .2s, color .2s;
    } 
 
-   #socialMedia ul {
-      list-style-type: none;
+   #socialMedia li {
+      list-style-type: none !important;
    } 
 
    #socialMedia li i:hover{
