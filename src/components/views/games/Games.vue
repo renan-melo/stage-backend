@@ -1,17 +1,19 @@
 <template>
 
   <div id="games">
+     <Content/>
     <h1>Games</h1>
+   
   </div>
    
 </template>
 
 <script>
-
+import Content from '../../utils/Content.vue'
   export default {
     name: 'Games',
     components:{
-      
+      Content
     },
     data() {
     return {
