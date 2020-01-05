@@ -23,52 +23,52 @@ export default {
           id:1,
           src:'https://i.ytimg.com/vi/KaIeyKIwDz8/maxresdefault.jpg',
           title:"God of War 4",
-          path: '/games'
+          path: '/content'
         },{
           id:2,
           src:'https://www.elitronicos.com.br/wp-content/uploads/2019/03/1-1024_6599.jpg',
           title:'Halo 5',
-          path: '/games'
+          path: '/content'
         },{
           id:3,
           src:'https://i.ytimg.com/vi/Myz5XoSePXQ/maxresdefault.jpg',
           title:"Sonic",
-          path: '/games'
+          path: '/content'
         },{
           id:4,
           src:'https://observatoriodegames.bol.uol.com.br/wp-content/uploads/2019/12/keanu-reeves-cyberpunk-2077-johnny-silverhand.jpg',
           title:"Cyberpunk 2077",
-          path: '/games'
+          path: '/content'
         },{
           id:5,
           src:'https://www.siliconera.com/wp-content/uploads/2019/12/hellblade-2-senuas-saga-800x400.jpg',
           title:"Hellblade 2",
-          path: '/games'
+          path: '/content'
         },{
           id:6,
           src:'https://i.ytimg.com/vi/KaIeyKIwDz8/maxresdefault.jpg',
           title:"God of War 4",
-          path: '/games'
+          path: '/content'
         },{
           id:7,
           src:'https://www.elitronicos.com.br/wp-content/uploads/2019/03/1-1024_6599.jpg',
           title:'Halo 5',
-          path: '/games'
+          path: '/content'
         },{
           id:8,
           src:'https://i.ytimg.com/vi/Myz5XoSePXQ/maxresdefault.jpg',
           title:"Sonic",
-          path: '/games'
+          path: '/content'
         },{
           id:9,
           src:'https://observatoriodegames.bol.uol.com.br/wp-content/uploads/2019/12/keanu-reeves-cyberpunk-2077-johnny-silverhand.jpg',
           title:"Cyberpunk 2077",
-          path: '/games'
+          path: '/content'
         },{
           id:10,
           src:'https://www.siliconera.com/wp-content/uploads/2019/12/hellblade-2-senuas-saga-800x400.jpg',
           title:"Hellblade 2",
-          path: '/games'
+          path: '/content'
         }
       ]
       }

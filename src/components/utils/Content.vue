@@ -1,22 +1,20 @@
 <template>
 <div>
-<div style="background: url(https://images8.alphacoders.com/710/thumb-1920-710329.jpg)" class="jumbotron bg-cover text-white">
-    <div class="container py-5 text-center">
-        <h1 class="display-4 font-weight-bold">God of war 4</h1>
-        <p class="font-italic mb-0 py-5">God of War é um jogo eletrônico de ação-aventura desenvolvido pela Santa Monica Studio e publicado pela Sony Interactive Entertainment</p>
-        <p class="font-italic">{{items.date}}
-        </p>    
+    <div style="background: url(https://images8.alphacoders.com/710/thumb-1920-710329.jpg)" class="jumbotron bg-cover text-white">
+        <div class="container py-5 text-center">
+            <h1 class="display-4 font-weight-bold">{{item.title}}</h1>
+            <p class="font-italic mb-0 py-5">{{item.title}}</p>  
+        </div>
+    </div>
+    <div class="container py-5">
+        <h2 class="h3 font-weight-bold">{{item.title}}</h2>
+        <p class="font-italic">{{item.date}}</p>  
+        <div class="row">
+            <div class="col-lg-10 mb-4" v-html="item.content">
+            </div>
+        </div>
     </div>
 </div>
-<div class="container py-5">
-    <h2 class="h3 font-weight-bold">God of war 4</h2>
-    <div class="row">
-        <div class="col-lg-10 mb-4">
-            {{items.content}}
-        </div>
-        </div>
-        </div>
-        </div>
 </template>
 
 <script>
@@ -24,10 +22,21 @@
 
 export default {
     name:'Content',
-    data() {
-        return{
-            items:{
+    props:{
+        item:Object
+    }
+}
+
+</script>
+
+<style scoped>
+
+
+</style>
+
+item:{
                 date:new Date().toLocaleDateString(),
+                title:'God of war',
                 content:`<p class="font-italic text-muted">God of War é ambientado na mitologia nórdica, com o lendário Fantasma de Esparta deixando a Grécia para tentar uma vida normal em Midgard, mas dessa vez ele não está sozinho. O jogo também destaca Atreus, filho de Kratos e pilar fundamental na proposta do game. A fim de evitar revelar mais do que o necessário, o que você precisa saber sobre a narrativa é que pai e filho estão de luto e determinados a arriscarem suas vidas para realizar o último desejo da mãe de Atreus: levar as cinzas dela para o ponto mais alto do reino.</p>
             <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p>
                   
@@ -80,14 +89,3 @@ PUBLICIDADE
  `,
                 
             },
-           
-        }
-    }
-}
-
-</script>
-
-<style scoped>
-
-
-</style>
