@@ -27,7 +27,6 @@
     </div>
 
  </div>
-    <!-- <button @click="load" class="btn btn-primary">Carregar mais</button>  -->
 
   </div>
 
@@ -37,6 +36,7 @@
 
 import Card from '../../utils/Card'
 import LastNews from '../../utils/LastNews'
+import axios from 'axios'
 
 export default {
   name: "NewsSection",
@@ -58,47 +58,23 @@ export default {
     }
   },created(){
        this.scaleCards()
+  },mounted(){
+     axios.get('http://localhost:3000/sample/database/getPosts').then((response) => {
+             this.items = response.data.map((item)=>{
+               return{
+                id:item.id,
+                date:new Date(item.reg_date).toLocaleDateString(),
+                img_card:item.img_card,
+                title:item.title,
+                category:item.category,
+                path: '/content/'+item.id
+               }
+             }) 
+      })
   },
   data(){
     return{
-      items:[
-        {
-        id:1,
-        date:new Date().toLocaleDateString(),
-        src:'https://i.ytimg.com/vi/KaIeyKIwDz8/maxresdefault.jpg',
-        title:"God of War 4",
-        category:"PS4",
-        path: '/content'
-        },{
-        id:2,
-        date:new Date().toLocaleDateString(),
-        src:'https://www.elitronicos.com.br/wp-content/uploads/2019/03/1-1024_6599.jpg',
-        title:'Halo 5',
-        category:'Xbox One',
-        path: '/content'
-        },{
-        id:3,
-        date:new Date().toLocaleDateString(),
-        src:'https://i.ytimg.com/vi/Myz5XoSePXQ/maxresdefault.jpg',
-        title:"Sonic",
-        category:"Filmes",
-        path: '/content'
-        },{
-        id:4,
-        date:new Date().toLocaleDateString(),
-        src:'https://observatoriodegames.bol.uol.com.br/wp-content/uploads/2019/12/keanu-reeves-cyberpunk-2077-johnny-silverhand.jpg',
-        title:"Cyberpunk 2077",
-        category:"Platafomas",
-        path: '/content'
-        },{
-        id:5,
-        date:new Date().toLocaleDateString(),
-        src:'https://www.siliconera.com/wp-content/uploads/2019/12/hellblade-2-senuas-saga-800x400.jpg',
-        title:"Hellblade 2",
-        category:"Xbox One",
-        path: '/content'
-        }
-      ]
+      items:[]
     }
   }
 }

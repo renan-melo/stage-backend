@@ -1,16 +1,16 @@
 <template>
 <div id="card">
 
-  <router-link :to="item.path" v-for="(item,index) in items" :key="index" class="card-router media container justify-content-center align-items-center text-dark my-3">
+  <router-link :to="item.path || '#'" v-for="(item,index) in items" :key="index" class="card-router media container justify-content-center align-items-center text-dark my-3">
     
       <div v-if="!item.scale" class="row">
 
         <div class="card-div-small col-6 d-flex justify-content-center align-items-center p-0">
           <a class=" p-0 m-0" href="#">
-            <img :src="item.src" :alt="item.title" class="img-fluid img-scale-small p-0 m-0 col-md-10 col-lg-12 col-sm-5 align-self-center d-flex" >
+            <img :src="item.img_card" :alt="item.title" class="img-fluid img-scale-small p-0 m-0 col-md-10 col-lg-12 col-sm-5 align-self-center d-flex" >
           </a>
         </div>
-    
+ 
         <div class="col-6 py-1 d-flex flex-column justify-content-between align-items-start">
           <p class="p-0 m-0 text-muted">{{item.date}}</p>
           <h3 class="p-0 m-0">{{item.title}}</h3>
@@ -22,7 +22,7 @@
 
         <div class="card-div-medium col-12 d-flex justify-content-center align-items-center p-0">
           
-            <img :src="item.src" :alt="item.title" class="img-fluid img-scale-medium p-0 m-0 col-12 align-self-center d-flex" >
+            <img :src="item.img_card" :alt="item.title" class="img-fluid img-scale-medium p-0 m-0 col-12 align-self-center d-flex" >
             
             <div class="row col-12 p-0 img-text-scale-medium position-absolute d-flex flex-column justify-content-center align-items-end text-white">
               <p class="date text-white">{{item.date}}</p>

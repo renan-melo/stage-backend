@@ -5,7 +5,7 @@
 
         <div class="card-div-small col-6 d-flex justify-content-center align-items-center p-0">
           <a class=" p-0 m-0" href="#">
-            <img :src="item.src" :alt="item.title" class="img-fluid img-scale-small p-0 m-0 col-md-10 col-lg-12 col-sm-5 align-self-center d-flex" >
+            <img :src="item.img_card" :alt="item.title" class="img-fluid img-scale-small p-0 m-0 col-md-10 col-lg-12 col-sm-5 align-self-center d-flex" >
           </a>
         </div>
     
