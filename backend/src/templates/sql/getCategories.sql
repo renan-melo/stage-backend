@@ -1,0 +1,1 @@
+select c.id,UPPER(c.name) as name from tab_category c 
