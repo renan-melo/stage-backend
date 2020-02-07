@@ -7,6 +7,13 @@ import router from './router'
 import axios from 'axios'
 import 'simplemde/dist/simplemde.min.css'
 import VueAxios from 'vue-axios'
+import { PaginationControl, PaginationPage } from 'vue-smart-pagination'
+
+
+
+Vue.component('PaginationControl', PaginationControl)
+
+Vue.component('PaginationPage', PaginationPage)
 
 Vue.use(VueAxios, axios)
 

@@ -2,9 +2,9 @@
 
   <div id="newsection" class="container d-flex flex-row justify-content-center aling-content-center">
 
-    <div class="col-lg-11 d-flex flex-row justify-content-between aling-content-center">
+    <div class="r col-lg-11 d-flex flex-row justify-content-between aling-content-center">
 
-    <div class="col-8 mt-5 mb-3">
+    <div class="caixa col col-lg-8 mt-5 mb-3">
 
       <div class="container col-12 d-flex flex-row justify-content-between aling-content-center m-0">      
         <router-link to="#" class="text-decoration-none">
@@ -22,7 +22,7 @@
       <Card :items="items" class="col-12"/>
 
     </div>
-    <div class="col-4 mt-5 mb-3">
+    <div class="d-none d-lg-block col-4 mt-5 mb-3">
       <LastNews class="d-none d-lg-block col-12"/>
     </div>
 
@@ -84,4 +84,18 @@ export default {
 #newsection .news-link-cards:hover{
   color:crimson !important;
 }
+@media screen and (max-width: 600px) {
+  .caixa {
+    
+    width: 100px;
+    
+}
+.r {
+    padding: 0px;
+    
+}
+#newsection{
+  padding: 0px
+}
+  }
 </style>

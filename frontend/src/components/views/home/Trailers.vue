@@ -6,12 +6,12 @@
       <h1 class="text-center text-white">Trailers </h1>
     </div>
 
-    <div class="col-12 d-flex">
-      <div class="embed-responsive embed-responsive-21by9 col-lg-8 px-2">
+    <div class="r row col-12 d-flex">
+      <div class="e embed-responsive embed-responsive-16by9 col-lg-8 px-2">
         <iframe class="embed-responsive-item" :src="this.itemSelected.src" allowfullscreen></iframe>
       </div>
       <div class="col-md-4 text-white">
-        <h3 class="my-3 ">{{this.itemSelected.title}}</h3>
+        <h3 class="my-4 ">{{this.itemSelected.title}}</h3>
         <p>{{this.itemSelected.text}}</p>
         <h3 class="my-3">Detalhes</h3>
         <ul>
@@ -24,8 +24,8 @@
       <h3 class="my-5 text-white">Assista Tambem...</h3>
     </div>
     
-    <div class="col-12 d-flex">
-      <div v-for="(item,index) in this.items" :key="index" class="col-md-3 col-sm-6 mb-4">
+    <div class="col-12 row d-flex">
+      <div v-for="(item,index) in this.items" :key="index" class="trailer-mini  col-md-3 col-sm-6 mb-5">
         <div class="embed-responsive embed-responsive-4by3">
           <iframe class="border border-dark embed-responsive-item" :src="item.src"></iframe>
         </div>
@@ -110,6 +110,21 @@ export default {
   background: #141E30;
   background: -webkit-linear-gradient(to right, #243B55, #141E30);  
   background: linear-gradient(to right, #243B55, #141E30);
+}
+@media screen and (max-width: 600px) {
+  .r {
+    padding: 0px;
+    padding-left: 30px;
+  }
+  .e {
+    height: 28vh;
+  }
+  .trailer-mini{
+    height: 30vh;
+    padding: 0px;
+    padding-left: 30px;
+    
+  }
 }
 
 </style>

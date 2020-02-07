@@ -12,7 +12,7 @@
         <div v-for="(item,index) in items" :key="index" :class="'carousel-item ' + item.class" >
 
           <!-- Image 1660 x 800-->
-           <img :src="item.src" class="object-fit_fill"/>
+           <img :src="item.src" class="col-s-12 h-12 object-fit_fill"/>
 
           <div class="carousel-content-title carousel-caption d-none d-md-block">
             <h3>{{item.title}}</h3>
@@ -22,7 +22,7 @@
 
       </div>
 
-      <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+      <a class="carousel-control-prev " href="#carousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon"></span>
         <span class="sr-only">Anterior</span>
       </a>
@@ -44,22 +44,22 @@ export default {
     return{
       items:[
         {
-          src:'https://www.gamewallpapers.com/img_script/wallpaper_dir/img.php?src=wallpaper_call_of_duty_ww2_01_2560x1080.jpg&height=506',
+          src:'https://thumbies.net/wp-content/uploads/2019/11/Clean-3.png',
           title:'Call of Duty',
           subtitle:'Call of Duty Mobile é anunciado para Android e iOS',
           class:'active'
         },{
-          src:'https://i.imgur.com/hbuzqMf.jpg',
+          src:'https://media.indiedb.com/images/members/1/527/526666/the_witcher_3_wild_hunt_geralt_trophies-1920x1080.jpg',
           title:'The Witcher 3',
           subtitle:'The Witcher 3: Wild Hunt é um jogo eletrônico de ação do subgênero RPG desenvolvido pela CD Projekt RED',
           class:''
         },{
-          src:'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/main_element/public/media/image/2018/11/analisis-fallout-76-ps4-xbox-one-pc.jpg?itok=BeMnIhRX',
-          title:'Fallout 76',
+          src:'https://wallpaperplay.com/walls/full/0/9/e/293978.jpg',
+          title:'Ciberpunk 2077',
           subtitle:'Análise | Fallout 76 é uma trágica experimentação de multiplayer que deu errado',
           class:''
         },{
-          src:'https://static.madinfinite.com/images/big/6/desenvolvedores-explicam-novo-sistema-de-loot-boxes-de-rocket-league-005378.jpg',
+          src:'https://rocketleague.media.zestyio.com/rl_rp4_key-art_no-logos.c0c5d95976999dafdcfb47136b8bddec.rk8MrNESr.jpg',
           title:'Rocket League',
           subtitle:'Desenvolvedores explicam novo sistema de loot boxes de Rocket League',
           class:''
@@ -74,16 +74,31 @@ export default {
 
 <style scoped>
 
-.carousel img{
-  width: 100vw;
-  height: 88vh;
-  object-fit: fill !important;
-  object-position: 50% 50%  !important;
+@media screen and (min-width: 600px) {
+  .carousel img {
+    width: 100vw;
+    height: 80vh;
+    object-fit: fill !important;
+    object-position: 50% 50%  !important; 
+  }
 }
+
+@media screen and (max-width: 600px) {
+  .carousel img {
+  width: 100vw;
+  height: 80vh;
+  object-fit: cover !important;
+  object-position: 85% 50%  !important; 
+}
+  }
+  
 
 .carousel-content-title{
   background-color: rgba(0, 0, 0, 0.774);
   box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.904);
+  
 }
+
+
 
 </style>

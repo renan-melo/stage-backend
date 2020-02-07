@@ -1,16 +1,23 @@
 <template>
-  <div id="nostalgia">
-    <h1>nostalgia</h1>
-  </div>
+ <div class="">
+    
+    <BlogLayout/>
+
+  
+</div>
 </template>
 
  
 
 
 <script>
+import BlogLayout from '../../commons/BlogLayout'
 
 export default {
   name: 'Nostalgia',
+  components:{
+    BlogLayout,
+  }
 }
 </script>
 
