@@ -5,9 +5,9 @@
   "main": "./src/index.js",
   "scripts": {
     "lint": "eslint .",
-    "dev": "export NODE_ENV=development && nodemon src/index.js",
-    "prd": "export NODE_ENV=production eslint . && pm2 start src/config/ecosystem.config.js --no-daemon",
-    "test": "export NODE_ENV=test eslint . && cd ./src && mocha"
+    "dev": "NODE_ENV=development && nodemon src/index.js",
+    "prd": "NODE_ENV=production eslint . && pm2 start src/config/ecosystem.config.js --no-daemon",
+    "test": "NODE_ENV=test eslint . && cd ./src && mocha"
   },
   "repository": {},
   "author": "Stanley Gomes",

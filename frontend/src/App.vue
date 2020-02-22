@@ -40,5 +40,6 @@ export default {
 <style>
 #app{
   background: #EAEAEA; 
+  overflow: auto;
 }
 </style>

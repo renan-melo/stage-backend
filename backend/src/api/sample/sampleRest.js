@@ -16,6 +16,31 @@ sampleRest.get('/database/getPosts', (req, res) => {
   }).catch(err => httpResponseUtils.error(res, err))
 })
 
+sampleRest.get('/database/getPostsGames', (req, res) => {
+  databaseUtils.namedQuery('getPostsGames', {}).then(response => {
+    httpResponseUtils.json(res, response)
+  }).catch(err => httpResponseUtils.error(res, err))
+})
+
+sampleRest.get('/database/getPostsNews', (req, res) => {
+  databaseUtils.namedQuery('getPostsNews', {}).then(response => {
+    httpResponseUtils.json(res, response)
+  }).catch(err => httpResponseUtils.error(res, err))
+})
+
+sampleRest.get('/database/getPostsNostalgia', (req, res) => {
+  databaseUtils.namedQuery('getPostsNostalgia', {}).then(response => {
+    httpResponseUtils.json(res, response)
+  }).catch(err => httpResponseUtils.error(res, err))
+})
+
+sampleRest.get('/database/getPostsSpecials', (req, res) => {
+  databaseUtils.namedQuery('getPostsSpecials', {}).then(response => {
+    httpResponseUtils.json(res, response)
+  }).catch(err => httpResponseUtils.error(res, err))
+})
+
+
 sampleRest.get('/database/getPostsView', (req, res) => {
   databaseUtils.namedQuery('getPostsView', {}).then(response => {
     httpResponseUtils.json(res, response)

@@ -60,6 +60,7 @@ export default {
        this.scaleCards()
   },mounted(){
      axios.get('http://localhost:3000/sample/database/getPosts').then((response) => {
+       console.log(response)
              this.items = response.data.map((item)=>{
                return{
                 id:item.id,

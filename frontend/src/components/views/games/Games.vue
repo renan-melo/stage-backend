@@ -2,6 +2,7 @@
 
   <div id="games">
      <Content/>
+     <NewsSectionGames/>
     <h1>Games</h1>
    
   </div>
@@ -10,10 +11,13 @@
 
 <script>
 import Content from '../../utils/Content.vue'
+import NewsSectionGames from '../games/NewsSectionGames'
+
   export default {
     name: 'Games',
     components:{
-      Content
+      Content,
+      NewsSectionGames,
     },
     data() {
     return {

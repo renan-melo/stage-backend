@@ -1,6 +1,7 @@
 <template>
   <div id="news">
-<h1>news</h1>
+<Content/>
+<NewsSectionNews/>
   </div>
 </template>
 
@@ -8,8 +9,15 @@
 
 
 <script>
+import Content from '../../utils/Content.vue'
+import NewsSectionNews from '../news/NewsSectionNews'
+
  export default {
-    name: 'News'
+    name: 'News',
+    components:{
+      Content,
+      NewsSectionNews,
+    }
 }
 </script>
 

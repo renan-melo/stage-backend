@@ -1,7 +1,7 @@
 <template>
  <div class="">
-    
-    <BlogLayout/>
+   <Content/>
+    <NewsSectionNostalgia/>
 
   
 </div>
@@ -11,12 +11,15 @@
 
 
 <script>
-import BlogLayout from '../../commons/BlogLayout'
+import Content from '../../utils/Content.vue'
+import NewsSectionNostalgia from '../nostalgia/NewsSectionNostalgia'
 
 export default {
   name: 'Nostalgia',
   components:{
-    BlogLayout,
+    Content,
+    NewsSectionNostalgia,
+    
   }
 }
 </script>

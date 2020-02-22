@@ -1,6 +1,7 @@
 <template>
   <div id="specials">
-    <h1>specials</h1>
+    <Content/>
+  <NewsSectionSpecials/>
   </div>
 </template>
 
@@ -8,9 +9,15 @@
 
 
 <script>
+import Content from '../../utils/Content.vue'
+import NewsSectionSpecials from '../specials/NewsSectionSpecials'
 
 export default {
-  name: 'Specials'
+  name: 'Specials',
+  components:{
+    Content,
+    NewsSectionSpecials,
+  }
 }
 </script>
 
