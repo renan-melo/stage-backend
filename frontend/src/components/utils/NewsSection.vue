@@ -7,16 +7,16 @@
     <div class="caixa col col-lg-8 mt-5 mb-3">
 
       <div class="container col-12 d-flex flex-row justify-content-between aling-content-center m-0">      
-        <router-link to="#" class="text-decoration-none">
+        <!-- <router-link to="#" class="text-decoration-none"> -->
           <span class="d-inline news-link-cards text-uppercase font-weight-bold text-dark h4 align-bottom">
             novidade
           </span> 
-        </router-link>
-        <router-link to="#" class="text-decoration-none">
+        <!-- </router-link> -->
+        <!-- <router-link to="#" class="text-decoration-none">
           <span class="d-inline news-link-cards text-uppercase font-weight-bold text-muted text-decoration-none h6 align-bottom">
             ver mais
           </span> 
-        </router-link>
+        </router-link> -->
       </div>
 
       <Card :items="items" class="col-12"/>
@@ -34,12 +34,15 @@
 
 <script>
 
-import Card from '../../utils/Card'
-import LastNews from '../../utils/LastNews'
+import Card from './Card'
+import LastNews from './LastNews'
 import axios from 'axios'
 
 export default {
-  name: "NewsSectionNews",
+  name: "NewsSection",
+   props:{
+    id_group:String
+  },
   components:{
     Card,
     LastNews
@@ -59,8 +62,8 @@ export default {
   },created(){
        this.scaleCards()
   },mounted(){
-     axios.get('http://localhost:3000/sample/database/getPostsNews').then((response) => {
-       console.log(response)
+    let id_group = this.id_group?parseInt(this.id_group):null
+     axios.get('http://localhost:3000/sample/database/getPosts/'+ id_group).then((response) => {
              this.items = response.data.map((item)=>{
                return{
                 id:item.id,
@@ -82,10 +85,8 @@ export default {
 </script>
 
 <style scoped>
-#newsection .news-link-cards:hover{
-  color:crimson !important;
-}
-@media screen and (max-width: 600px) {
+
+/* @media screen and (max-width: 600px) {
   .caixa {
     
     width: 100px;
@@ -98,5 +99,5 @@ export default {
 #newsection{
   padding: 0px
 }
-  }
+  } */
 </style>

@@ -40,6 +40,9 @@ import axios from 'axios'
 
 export default {
   name: "NewsSectionNostalgia",
+  props:{
+    id_group:Number
+  },
   components:{
     Card,
     LastNews
@@ -59,7 +62,7 @@ export default {
   },created(){
        this.scaleCards()
   },mounted(){
-     axios.get('http://localhost:3000/sample/database/getPostsNostalgia').then((response) => {
+     axios.get('http://localhost:3000/sample/database/getPosts/'+ this.id_group).then((response) => {
        console.log(response)
              this.items = response.data.map((item)=>{
                return{

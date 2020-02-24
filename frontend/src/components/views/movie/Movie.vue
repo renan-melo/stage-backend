@@ -1,8 +1,7 @@
 <template>
   <div id="news">
 <Content/>
-<NewsSectionNews/>
-  </div>
+<NewsSection :id_group="this.$route.params.id"/>  </div>
 </template>
 
  
@@ -10,13 +9,13 @@
 
 <script>
 import Content from '../../utils/Content.vue'
-import NewsSectionNews from '../news/NewsSectionNews'
+import NewsSection from '../../utils/NewsSection'
 
  export default {
     name: 'News',
     components:{
       Content,
-      NewsSectionNews,
+      NewsSection,
     }
 }
 </script>

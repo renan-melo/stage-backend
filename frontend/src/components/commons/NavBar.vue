@@ -46,17 +46,17 @@ export default {
           name:'home'.toUpperCase(),
           path:'/'
         },{
-          name:'novidades'.toUpperCase(),
-          path:'/news'
-        },{
           name:'games'.toUpperCase(),
-          path:'/games'
+          path:'/games/1'
+        },{
+          name:'filmes'.toUpperCase(),
+          path:'/movie/2'
         },{
           name:'nostalgia'.toUpperCase(),
-          path:'/nostalgia'
+          path:'/nostalgia/3'
         },{
           name:'especial'.toUpperCase(),
-          path:'/specials'
+          path:'/specials/4'
         }
       ],
     }

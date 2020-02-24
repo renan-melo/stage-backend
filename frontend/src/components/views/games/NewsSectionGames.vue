@@ -52,7 +52,7 @@ export default {
     },
     scaleCards(){
       this.items.forEach((item,index) => {
-      const isDivisor = Number.isInteger(index/3) 
+      const isDivisor = Number.isInteger(index/3)
       index > 2 && isDivisor ? item.scale = true:item.scale = false
       });
     }

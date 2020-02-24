@@ -2,40 +2,41 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../components/views/home/Home.vue'
 import Games from '../components/views/games/Games'
-import News from '../components/views/news/News.vue'
+import Movie from '../components/views/movie/Movie.vue'
 import Nostalgia from '../components/views/nostalgia/Nostalgia.vue'
 import Specials from '../components/views/specials/Specials.vue'
-import Mobile from '../components/views/mobile/Mobile.vue'
 import Content from '../components/utils/Content.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
+    params:{id:null},
     path: '/',
     name: 'home',
     component: Home
   },{
-    path: '/games',
+    params:{id:1},
+    path: '/games/:id',
     name: 'games',
     component: Games
   },{
-    path: '/news',
-    name: 'news',
-    component: News
+    params:{id:2},
+    path: '/movie/:id',
+    name: 'movie',
+    component: Movie
   },{
-    path: '/nostalgia',
+    params:{id:3},
+    path: '/nostalgia/:id',
     name: 'nostalgia',
     component: Nostalgia
   },{
-    path: '/specials',
+    params:{id:4},
+    path: '/specials/:id',
     name: 'specials',
     component: Specials
   },{
-    path: '/mobile',
-    name: 'mobile',
-    component: Mobile
-  },{
+    params:{id:null},
     path: '/content/:id',
     name: 'content',
     component: Content

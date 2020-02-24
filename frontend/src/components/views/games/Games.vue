@@ -2,7 +2,7 @@
 
   <div id="games">
      <Content/>
-     <NewsSectionGames/>
+    <NewsSection :id_group="parseInt(this.$route.params.id)"/>
     <h1>Games</h1>
    
   </div>
@@ -11,13 +11,13 @@
 
 <script>
 import Content from '../../utils/Content.vue'
-import NewsSectionGames from '../games/NewsSectionGames'
+import NewsSection from '../../utils/NewsSection'
 
   export default {
     name: 'Games',
     components:{
       Content,
-      NewsSectionGames,
+      NewsSection,
     },
     data() {
     return {

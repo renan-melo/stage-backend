@@ -10,36 +10,31 @@ const httpRequestUtils = require('../../utils/httpRequest')
 const databaseUtils = require('../../utils/database')
 const mustacheUtils = require('../../utils/mustache')
 
-sampleRest.get('/database/getPosts', (req, res) => {
-  databaseUtils.namedQuery('getPosts', {}).then(response => {
+sampleRest.get('/database/getPosts/:id_group', (req, res) => {
+
+  let params = {}
+
+  if(req.params.id_group !== 'null'){
+    params.id_group= req.params.id_group
+  }
+
+  databaseUtils.namedQuery('getPosts', params).then(response => {
     httpResponseUtils.json(res, response)
   }).catch(err => httpResponseUtils.error(res, err))
 })
 
-sampleRest.get('/database/getPostsGames', (req, res) => {
-  databaseUtils.namedQuery('getPostsGames', {}).then(response => {
+sampleRest.get('/database/getBanner/:id_group', (req, res) => {
+
+  let params = {}
+
+  if(req.params.id_group !== 'null'){
+    params.id_group= req.params.id_group
+  }
+
+  databaseUtils.namedQuery('getBanner', params).then(response => {
     httpResponseUtils.json(res, response)
   }).catch(err => httpResponseUtils.error(res, err))
 })
-
-sampleRest.get('/database/getPostsNews', (req, res) => {
-  databaseUtils.namedQuery('getPostsNews', {}).then(response => {
-    httpResponseUtils.json(res, response)
-  }).catch(err => httpResponseUtils.error(res, err))
-})
-
-sampleRest.get('/database/getPostsNostalgia', (req, res) => {
-  databaseUtils.namedQuery('getPostsNostalgia', {}).then(response => {
-    httpResponseUtils.json(res, response)
-  }).catch(err => httpResponseUtils.error(res, err))
-})
-
-sampleRest.get('/database/getPostsSpecials', (req, res) => {
-  databaseUtils.namedQuery('getPostsSpecials', {}).then(response => {
-    httpResponseUtils.json(res, response)
-  }).catch(err => httpResponseUtils.error(res, err))
-})
-
 
 sampleRest.get('/database/getPostsView', (req, res) => {
   databaseUtils.namedQuery('getPostsView', {}).then(response => {

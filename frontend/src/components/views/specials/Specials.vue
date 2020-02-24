@@ -1,22 +1,19 @@
 <template>
   <div id="specials">
     <Content/>
-  <NewsSectionSpecials/>
+    <NewsSection :id_group="this.$route.params.id"/>
   </div>
 </template>
 
- 
-
-
 <script>
 import Content from '../../utils/Content.vue'
-import NewsSectionSpecials from '../specials/NewsSectionSpecials'
+import NewsSection from '../../utils/NewsSection'
 
 export default {
   name: 'Specials',
   components:{
     Content,
-    NewsSectionSpecials,
+    NewsSection,
   }
 }
 </script>

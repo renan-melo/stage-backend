@@ -39,7 +39,7 @@ import LastNews from '../../utils/LastNews'
 import axios from 'axios'
 
 export default {
-  name: "NewsSection",
+  name: "NewsSectionMovie",
   components:{
     Card,
     LastNews
@@ -59,7 +59,7 @@ export default {
   },created(){
        this.scaleCards()
   },mounted(){
-     axios.get('http://localhost:3000/sample/database/getPosts').then((response) => {
+     axios.get('http://localhost:3000/sample/database/getPostsNews').then((response) => {
        console.log(response)
              this.items = response.data.map((item)=>{
                return{

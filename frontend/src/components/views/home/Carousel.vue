@@ -7,12 +7,12 @@
       </ol>
 
 
-      <div class="carousel-inner">
+      <div class="carousel-inner h-100">
 
         <div v-for="(item,index) in items" :key="index" :class="'carousel-item ' + item.class" >
 
           <!-- Image 1660 x 800-->
-           <img :src="item.src" class="col-s-12 h-12 object-fit_fill"/>
+           <img :src="item.src" />
 
           <div class="carousel-content-title carousel-caption d-none d-md-block">
             <h3>{{item.title}}</h3>
@@ -38,8 +38,13 @@
 
 <script>
 
+import axios from 'axios'
+
 export default {
   name: 'Carousel',
+  props:{
+    id_group:String
+  },
   data(){
     return{
       items:[
@@ -67,36 +72,27 @@ export default {
       ]
     }
     
-  }
-  
+  }, mounted(){
+        axios.get('http://localhost:3000/sample/database/getBanner/'+this.id_group).then((response) => {
+             console.log(this.id_group);
+             console.log(response.data)
+            //  const data = {
+            //      id:parseInt(this.$route.params.id),
+            //      qtd_view:this.item.qtd_view + 1
+            //  }
+            })  
+    },
 }
 </script>
 
 <style scoped>
 
-@media screen and (min-width: 600px) {
-  .carousel img {
-    width: 100vw;
-    height: 80vh;
-    object-fit: fill !important;
-    object-position: 50% 50%  !important; 
-  }
+#carousel{
+  height:80vh;
 }
-
-@media screen and (max-width: 600px) {
-  .carousel img {
-  width: 100vw;
-  height: 80vh;
-  object-fit: cover !important;
-  object-position: 85% 50%  !important; 
-}
-  }
-  
-
 .carousel-content-title{
   background-color: rgba(0, 0, 0, 0.774);
   box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.904);
-  
 }
 
 
