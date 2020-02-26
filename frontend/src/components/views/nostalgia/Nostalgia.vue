@@ -1,23 +1,24 @@
 <template>
- <div class="">
-    <Content/>
-    <NewsSection :id_group="this.$route.params.id"/>
-</div>
+
+  <div id="games">
+    <Carousel :id_group="this.$route.params.id || null"/>
+    <NewsSection :id_group="parseInt(this.$route.params.id)"/>
+    <Trailers/>
+  </div>
+   
 </template>
 
 <script>
-import Content from '../../utils/Content.vue'
+import Carousel from '../../utils/Carousel'
 import NewsSection from '../../utils/NewsSection'
+import Trailers from '../../utils/Trailers'
 
-export default {
-  name: 'Nostalgia',
-  components:{
-    Content,
-    NewsSection,
+  export default {
+    name: 'Games',
+    components:{
+      Carousel,
+      NewsSection,
+      Trailers      
+    }
   }
-}
 </script>
-
-<style>
-
-</style>

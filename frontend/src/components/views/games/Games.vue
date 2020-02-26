@@ -1,47 +1,24 @@
 <template>
 
   <div id="games">
-     <Content/>
+    <Carousel :id_group="this.$route.params.id || null"/>
     <NewsSection :id_group="parseInt(this.$route.params.id)"/>
-    <h1>Games</h1>
-   
+    <Trailers/>
   </div>
    
 </template>
 
 <script>
-import Content from '../../utils/Content.vue'
+import Carousel from '../../utils/Carousel'
 import NewsSection from '../../utils/NewsSection'
+import Trailers from '../../utils/Trailers'
 
   export default {
     name: 'Games',
     components:{
-      Content,
+      Carousel,
       NewsSection,
-    },
-    data() {
-    return {
-      items:[
-        {
-          id:1,
-          title:"God of War",
-        },{
-          id:2,
-          title:"Uncharted",
-        },{
-          id:2,
-          title:"Days gone",
-        },{
-          id:2,
-          title:"Horizon zero dawn",
-        }
-      ]
+      Trailers      
     }
-    } 
   }
 </script>
-
-<style>
-
-
-</style>

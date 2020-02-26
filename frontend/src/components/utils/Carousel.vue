@@ -16,7 +16,6 @@
 
           <div class="carousel-content-title carousel-caption d-none d-md-block">
             <h3>{{item.title}}</h3>
-            <p> {{item.subtitle}}</p>
           </div>
         </div>
 
@@ -47,35 +46,22 @@ export default {
   },
   data(){
     return{
-      items:[
-        {
-          src:'https://thumbies.net/wp-content/uploads/2019/11/Clean-3.png',
-          title:'Call of Duty',
-          subtitle:'Call of Duty Mobile é anunciado para Android e iOS',
-          class:'active'
-        },{
-          src:'https://media.indiedb.com/images/members/1/527/526666/the_witcher_3_wild_hunt_geralt_trophies-1920x1080.jpg',
-          title:'The Witcher 3',
-          subtitle:'The Witcher 3: Wild Hunt é um jogo eletrônico de ação do subgênero RPG desenvolvido pela CD Projekt RED',
-          class:''
-        },{
-          src:'https://wallpaperplay.com/walls/full/0/9/e/293978.jpg',
-          title:'Ciberpunk 2077',
-          subtitle:'Análise | Fallout 76 é uma trágica experimentação de multiplayer que deu errado',
-          class:''
-        },{
-          src:'https://rocketleague.media.zestyio.com/rl_rp4_key-art_no-logos.c0c5d95976999dafdcfb47136b8bddec.rk8MrNESr.jpg',
-          title:'Rocket League',
-          subtitle:'Desenvolvedores explicam novo sistema de loot boxes de Rocket League',
-          class:''
-        },
-      ]
+      items:[]
     }
     
   }, mounted(){
         axios.get('http://localhost:3000/sample/database/getBanner/'+this.id_group).then((response) => {
-             console.log(this.id_group);
-             console.log(response.data)
+          response.data.forEach((banner,index) => {
+              banner.class =''
+              if(index === 0){
+                banner.class='active'
+              }
+
+            this.items.push(banner)
+
+          });
+          
+          
             //  const data = {
             //      id:parseInt(this.$route.params.id),
             //      qtd_view:this.item.qtd_view + 1

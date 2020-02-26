@@ -41,7 +41,7 @@ import axios from 'axios'
 export default {
   name: "NewsSection",
    props:{
-    id_group:String
+    id_group:Number
   },
   components:{
     Card,

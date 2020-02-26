@@ -8,9 +8,9 @@
 
 <script>
 
-import Carousel from './Carousel'
+import Carousel from '../../utils/Carousel'
 import NewsSection from '../../utils/NewsSection'
-import Trailers from './Trailers'
+import Trailers from '../../utils/Trailers'
 
 export default {
   name: 'Home',
