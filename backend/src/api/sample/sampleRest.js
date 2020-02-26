@@ -54,8 +54,14 @@ sampleRest.get('/database/getCategories', (req, res) => {
   }).catch(err => httpResponseUtils.error(res, err))
 })
 
+sampleRest.get('/database/getGroup', (req, res) => {
+  databaseUtils.namedQuery('getGroup', {}).then(response => {
+    httpResponseUtils.json(res, response)
+  }).catch(err => httpResponseUtils.error(res, err))
+})
+
 sampleRest.post('/database/insertCategory', (req, res) => {
-  databaseUtils.basicInsert('tab_category', { name: req.body.name}, ['name']).then(response => {
+  databaseUtils.basicInsert('tab_category', { name: req.body.name,id_group:req.body.id_group}, ['name','id_group']).then(response => {
     httpResponseUtils.json(res, response)
   }).catch(err => httpResponseUtils.error(res, err))
 })

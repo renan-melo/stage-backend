@@ -1,5 +1,5 @@
 <template>
-  <div class="input-group mb-3 col-4">
+  <div class="input-group mb-3 col-3">
     <div class="input-group-prepend">
       <span class="input-group-text">{{titleInput}}</span>
     </div>

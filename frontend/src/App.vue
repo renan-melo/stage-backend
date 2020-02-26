@@ -15,8 +15,7 @@ export default {
   name: "app",
   data(){
     return {
-      isCreate:false
-
+      isCreate:true
     }
   },
   methods:{

@@ -17,6 +17,15 @@
         </button>
 
       </div>
+
+      <div class="input-group-prepend">
+        <span class="input-group-text" >Grupo</span>
+      </div>
+
+      <select class="custom-select col-6" :disabled="!isAddOrEditCategoryComputed" required v-model="group">
+        <option v-for="(group) in groups" :key="group.id" :value="group.id">{{group.name}}</option>
+      </select>
+
     </div>
 </template>
 
@@ -34,10 +43,12 @@ export default {
         if(event.type === 'change'){
           this.alterButtonsAction(['edit','delete','add']);
         }
-
-      this.$emit('previewCategoryEmit',this.category)
+      this.group = this.category.id_group
+      this.$emit('previewCategoryEmit',this.category.name)
       },
       loadCategories(selected = null){
+        axios.get('http://localhost:3000/sample/database/getGroup').then((response) => {
+            this.groups = response.data
         axios.get('http://localhost:3000/sample/database/getCategories').then((response) => {
             this.categories = response.data
             if(selected){
@@ -46,6 +57,7 @@ export default {
               })[0]
             }
         })
+       })
       },
       alterButtonsAction(options){
         this.buttonsAction = this.buttons.filter(button =>{
@@ -111,11 +123,11 @@ export default {
 
         if(this.idEdit){
           params.url='updateCategory',
-          params.data = {id:this.idEdit,name:this.category}
+          params.data = {id:this.idEdit,name:this.category,id_group:this.group}
           this.idEdit=false
         }else{
           params.url='insertCategory',
-          params.data = {name:this.category}
+          params.data = {name:this.category, id_group:this.group}
         }
 
         if(validation){
@@ -155,6 +167,8 @@ export default {
         isAddOrEdit:false,
         categories:[],
         category:null,
+        groups:[],
+        group:null,
         message:{},
         idEdit:null,
         buttons:[
