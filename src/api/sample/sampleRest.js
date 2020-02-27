@@ -104,6 +104,7 @@ sampleRest.post('/database/savePost', (req, res) => {
 
     await databaseUtils.basicInsert('tab_img', {id_post: id_post, img_card: item.img_card, img_banner:item.img_banner}, ['id_post','img_card','img_banner']).then(response => {
       console.log('ok - insert - tab_img');  
+      httpResponseUtils.json(res, response)
     }).catch(err => console.log('Error - insert - tab_img | ERROR:',err))
     console.log('Post salvo com sucesso!!!'); 
    })()
