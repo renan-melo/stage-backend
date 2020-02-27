@@ -13,7 +13,11 @@ router.use('/auth', authRest)
 router.use('/sample', sampleRest)
 
 /* static route for website */
-router.use('/static', express.static(config.server.static))
+	
+router.use(express.static('src/static'));
+router.use('/css', express.static(__dirname + '/static/css'));
+router.use('/js', express.static(__dirname + '/static/js'));
+router.use('/images', express.static(__dirname + '/static/images'));
 
 /* auth routes */
 router.use(authMiddleware)
