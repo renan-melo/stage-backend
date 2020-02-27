@@ -8,7 +8,7 @@
     "dev": "NODE_ENV=development && nodemon src/index.js",
     "prd": "NODE_ENV=production eslint . && pm2 start src/config/ecosystem.config.js --no-daemon",
     "test": "NODE_ENV=test eslint . && cd ./src && mocha",
-    "start":"NODE_ENV=production node src/index.js"
+    "start": "NODE_ENV=production node src/index.js"
   },
   "repository": {},
   "author": "Stanley Gomes",
