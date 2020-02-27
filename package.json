@@ -1,7 +1,7 @@
 {
-  "name": "backend",
+  "name": "reviewgames",
   "version": "0.0.1",
-  "description": "A Teenage Mutant Node Boilerplate",
+  "description": "Blog focados em jogos e filmes",
   "main": "./src/index.js",
   "scripts": {
     "lint": "eslint .",
@@ -11,7 +11,7 @@
     "start": "NODE_ENV=production node src/index.js"
   },
   "repository": {},
-  "author": "Stanley Gomes",
+  "author": "Renan Melo",
   "license": "MIT",
   "bugs": {},
   "dependencies": {
