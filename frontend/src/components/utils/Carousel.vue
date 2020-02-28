@@ -80,7 +80,7 @@ export default {
   
 }
 img{
-object-fit: fill;
+object-fit: contain;
    object-position: center;
   
 }
