@@ -89,7 +89,7 @@ z-index: 2;
 }
 
 .img-shadown{
-    object-fit: cover;
+    object-fit: fill;
     object-position: center;
     transform: scale(2);
     filter: blur(5px);
