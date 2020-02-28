@@ -32,6 +32,7 @@
 <script>
 
 import axios from 'axios'
+import {config} from '../../config/index'
 
 export default {
     name:'SelectCategory',
@@ -48,9 +49,9 @@ export default {
       this.$emit('previewCategoryEmit',this.category)
       },
       loadCategories(selected = null){
-        axios.get('http://stategames1-com-br.umbler.net/sample/database/getGroup').then((response) => {
+        axios.get(config.URL+'/sample/database/getGroup').then((response) => {
             this.groups = response.data
-        axios.get('http://stategames1-com-br.umbler.net/sample/database/getCategories').then((response) => {
+        axios.get(config.URL+'/sample/database/getCategories').then((response) => {
             this.categories = response.data
             if(selected){
               this.category = this.categories.filter(category=>{
@@ -112,7 +113,7 @@ export default {
       },
       delete(){
         this.isAddOrEdit = false
-        axios.post('http://stategames1-com-br.umbler.net/sample/database/deleteCategory',{id:this.category.id}).then(() => {
+        axios.post(config.URL+'/sample/database/deleteCategory',{id:this.category.id}).then(() => {
             this.alterButtonsAction(['add'])
             this.isAddOrEdit = false
             this.loadCategories()
@@ -132,7 +133,7 @@ export default {
         }
 
         if(validation){
-            axios.post('http://stategames1-com-br.umbler.net/sample/database/'+params.url,params.data).then(() => {
+            axios.post(config.URL+'/sample/database/'+params.url,params.data).then(() => {
               this.alterButtonsAction(['edit','add','delete'])
               this.isAddOrEdit = false
               this.loadCategories(this.category)

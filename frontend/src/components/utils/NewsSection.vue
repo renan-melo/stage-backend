@@ -11,19 +11,14 @@
           <span class="d-inline news-link-cards text-uppercase font-weight-bold text-dark h4 align-bottom">
             novidade
           </span> 
-        <!-- </router-link> -->
-        <!-- <router-link to="#" class="text-decoration-none">
-          <span class="d-inline news-link-cards text-uppercase font-weight-bold text-muted text-decoration-none h6 align-bottom">
-            ver mais
-          </span> 
-        </router-link> -->
+
       </div>
 
       <Card :items="items" class="col-12"/>
 
     </div>
     <div class="d-none d-lg-block col-4 mt-5 mb-3">
-      <LastNews class="d-none d-lg-block col-12"/>
+      <LastNews :id_group="this.id_group" class="d-none d-lg-block col-12"/>
     </div>
 
  </div>
@@ -37,6 +32,7 @@
 import Card from './Card'
 import LastNews from './LastNews'
 import axios from 'axios'
+import {config} from '../../config/index'
 
 export default {
   name: "NewsSection",
@@ -63,7 +59,7 @@ export default {
        this.scaleCards()
   },mounted(){
     let id_group = this.id_group?parseInt(this.id_group):null
-     axios.get('http://stategames1-com-br.umbler.net/sample/database/getPosts/'+ id_group).then((response) => {
+     axios.get(config.URL+'/sample/database/getPosts/'+ id_group).then((response) => {
              this.items = response.data.map((item)=>{
                return{
                 id:item.id,
@@ -86,18 +82,5 @@ export default {
 
 <style scoped>
 
-/* @media screen and (max-width: 600px) {
-  .caixa {
-    
-    width: 100px;
-    
-}
-.r {
-    padding: 0px;
-    
-}
-#newsection{
-  padding: 0px
-}
-  } */
+
 </style>

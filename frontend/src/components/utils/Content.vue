@@ -18,6 +18,7 @@
 <script>
 import axios from 'axios'
 import Banner from './Banner'
+import {config} from '../../config/index'
 
 export default {
     name:'Content',
@@ -30,15 +31,15 @@ export default {
         }
     },
     mounted(){
-        axios.get('http://stategames1-com-br.umbler.net/sample/database/getPost/'+this.$route.params.id).then((response) => {
+        axios.get(config.URL +'/sample/database/getPost/'+this.$route.params.id).then((response) => {
              this.item = response.data[0] 
              const data = {
                  id:parseInt(this.$route.params.id),
                  qtd_view:this.item.qtd_view + 1
              }
 
-             axios.post('http://stategames1-com-br.umbler.net/sample/database/addView',data).then((response) => {
-              console.log(response);
+             axios.post(config.URL +'/sample/database/addView',data).then(() => {
+                 
                 }) .catch(function (error) {
                     console.log(error);
                 });

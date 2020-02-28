@@ -38,6 +38,7 @@
 <script>
 
 import axios from 'axios'
+import {config} from '../../config/index'
 
 export default {
   name: 'Carousel',
@@ -50,7 +51,7 @@ export default {
     }
     
   }, mounted(){
-        axios.get('http://stategames1-com-br.umbler.net/sample/database/getBanner/'+this.id_group).then((response) => {
+        axios.get(config.URL + '/sample/database/getBanner/'+this.id_group).then((response) => {
           response.data.forEach((banner,index) => {
               banner.class =''
               if(index === 0){
@@ -60,12 +61,7 @@ export default {
             this.items.push(banner)
 
           });
-          
-          
-            //  const data = {
-            //      id:parseInt(this.$route.params.id),
-            //      qtd_view:this.item.qtd_view + 1
-            //  }
+
             })  
     },
 }

@@ -12,16 +12,20 @@
 <script>
 import CardLastNews from './CardLastNews'
 import axios from 'axios'
+import {config} from '../../config/index'
 
 export default {
     name:'LastNews',
+     props:{
+      id_group:String
+    },
     data(){
       return{
         items:[]
       }
     },
     mounted(){
-     axios.get('http://stategames1-com-br.umbler.net/sample/database/getPostsView').then((response) => {
+     axios.get(config.URL +'/sample/database/getPostsView/'+this.id_group).then((response) => {
 
              this.items = response.data.map((item)=>{
                return{

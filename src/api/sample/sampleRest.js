@@ -37,7 +37,13 @@ sampleRest.get('/database/getBanner/:id_group', (req, res) => {
 })
 
 sampleRest.get('/database/getPostsView', (req, res) => {
-  databaseUtils.namedQuery('getPostsView', {}).then(response => {
+  let params = {}
+
+  if(req.params.id_group !== 'null'){
+    params.id_group= req.params.id_group
+  }
+
+  databaseUtils.namedQuery('getPostsView', params).then(response => {
     httpResponseUtils.json(res, response)
   }).catch(err => httpResponseUtils.error(res, err))
 })
