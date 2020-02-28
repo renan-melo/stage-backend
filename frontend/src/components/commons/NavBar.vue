@@ -14,8 +14,8 @@
 
         <div class="col-5 col-lg-9">
           <ul class="row p-4 justify-content-between p-0 m-0 ">
-            <li v-for="(item,index) in items"  :key="index" class="nav-item nav-item-link p-0 py-2">
-                  <router-link class="nav-link link text-left px-0" :to="item.path" >{{item.name}}</router-link>
+            <li v-for="(item,index) in items"  :key="index" class="nav-item nav-item-link p-0 py-2" @click="activeIndex=false">
+                  <router-link :class="`nav-link link text-left px-0 ${index===activeIndex?'active':''}`" :to="item.path" >{{item.name}}</router-link>
             </li>
           </ul>
         </div>
@@ -41,22 +41,28 @@ export default {
   },
   data(){
     return{
+      activeIndex:0,
       items:[
         {
           name:'home'.toUpperCase(),
-          path:'/'
+          path:'/',
+          active:true
         },{
           name:'games'.toUpperCase(),
-          path:'/games/1'
+          path:'/games/1',
+          active:false
         },{
           name:'filmes'.toUpperCase(),
-          path:'/movie/2'
+          path:'/movie/2',
+          active:false
         },{
           name:'nostalgia'.toUpperCase(),
-          path:'/nostalgia/3'
+          path:'/nostalgia/3',
+          active:false
         },{
           name:'especial'.toUpperCase(),
-          path:'/specials/4'
+          path:'/specials/4',
+          active:false
         }
       ],
     }
@@ -88,6 +94,7 @@ export default {
   color: #fff;
   outline: none;
   cursor: pointer;
+  transition: color .5s;
 }
 
 #navbar .link:hover{
@@ -124,5 +131,17 @@ export default {
 #navbar .link:focus::after{
     width: 100% !important;
 }
+
+#navbar .active{
+    color: turquoise !important;
+}
+
+#navbar .active::after{
+    width: 100% !important;
+}
+
+
+
+
 
 </style>

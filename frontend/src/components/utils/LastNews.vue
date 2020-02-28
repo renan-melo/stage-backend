@@ -17,7 +17,7 @@ import {config} from '../../config/index'
 export default {
     name:'LastNews',
      props:{
-      id_group:String
+      id_group:Number
     },
     data(){
       return{

@@ -7,16 +7,18 @@
       </ol>
 
 
-      <div class="carousel-inner h-100 vw-100 ">
+      <div class="carousel-inner h-100">
 
-        <div v-for="(item,index) in items" :key="index" :class="'carousel-item ' + item.class" >
-
+        <div v-for="(item,index) in items" :key="index" :class="'carousel-item h-100 ' + item.class" >
+          <div class="h-100 w-100 d-flex justify-content-center align-content-center">
           <!-- Image 1660 x 800-->
-           <img :src="item.src" />
-
-          <div class="carousel-content-title carousel-caption d-none d-md-block">
+           <img :src="item.src" class="img-main"/>
+            <img :src="item.src" class="img-shadown h-100 w-100 position-absolute"/>
+          <div class="carousel-content-title carousel-caption d-none d-md-block ">
             <h3>{{item.title}}</h3>
           </div>
+
+        </div>
         </div>
 
       </div>
@@ -71,17 +73,51 @@ export default {
 
 #carousel{
   height:80vh;
+      background-color:black;
+
+}
+@media screen {
+  
+}
+img{
+object-fit: fill;
+   object-position: center;
+  
+}
+.img-main{
+z-index: 2;
 }
 
-img{
-   object-fit:cover;
-   object-position: top;
+.img-shadown{
+    object-fit: cover;
+    object-position: center;
+    transform: scale(2);
+    filter: blur(5px);
+    opacity: .5;
 }
+
 
 .carousel-content-title{
   background-color: rgba(0, 0, 0, 0.774);
   box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.904);
 }
+
+.carousel-item{
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 576px) { 
+
+ 
+ }
+
+@media (min-width: 768px) {  }
+
+@media (min-width: 992px) {  }
+
+
+@media (min-width: 1200px) {  }
 
 
 

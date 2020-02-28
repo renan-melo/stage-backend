@@ -1,12 +1,12 @@
 <template>
 
-  <div id="newsection" class="container d-flex flex-row justify-content-center aling-content-center">
+  <div id="newsection" class="container-fluid d-flex flex-row justify-content-center aling-content-center ">
 
-    <div class="r col-lg-11 d-flex flex-row justify-content-between aling-content-center">
+    <div class="col-12 d-flex flex-row justify-content-between aling-content-center p-0">
 
-    <div class="caixa col col-lg-8 mt-5 mb-3">
+    <div class="col-12 col-lg-8 mt-5 mb-3 p-0">
 
-      <div class="container col-12 d-flex flex-row justify-content-between aling-content-center m-0">      
+      <div class="col-12 d-flex flex-row justify-content-center aling-content-center m-0">      
         <!-- <router-link to="#" class="text-decoration-none"> -->
           <span class="d-inline news-link-cards text-uppercase font-weight-bold text-dark h4 align-bottom">
             novidade

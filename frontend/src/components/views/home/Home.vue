@@ -1,7 +1,7 @@
 <template>
   <div id="home" class="container-fluid p-0">
     <Carousel :id_group="this.$route.params.id || null"/>
-    <NewsSection :id_group="this.$route.params.id"/>
+    <NewsSection :id_group="this.$route.params.id || null"/>
     <Trailers/>
   </div>
 </template>

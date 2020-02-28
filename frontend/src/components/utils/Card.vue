@@ -1,19 +1,19 @@
 <template>
 <div id="card">
 
-  <router-link :to="item.path || '#'" v-for="(item,index) in items" :key="index" class="card-router media container justify-content-center align-items-center text-dark my-3">
+  <router-link :to="item.path || '#'" v-for="(item,index) in items" :key="index" class="card-router media container justify-content-center align-items-center text-dark my-3 p-0 col-12 col-md-8">
     
-      <div v-if="!item.scale" class="row">
+      <div v-if="!item.scale" class="row col-12 p-0 d-flex flex-column flex-md-row">
 
-        <div class="card-div-small col-6 d-flex justify-content-center align-items-center p-0">
-          <a class=" p-0 m-0" href="#">
-            <img :src="item.img_card" :alt="item.title" class="image img-fluid img-scale-small p-0 m-0 col-md-10 col-lg-12 col-sm-5 align-self-center d-flex" >
+        <div class="card-div-small col-12 col-md-6 d-flex justify-content-between align-items-center p-0">
+          <a class="p-0 m-0 col-12" href="#">
+            <img :src="item.img_card" :alt="item.title" class="image w-100 img-fluid img-scale-small p-0 m-0 align-self-center d-flex" >
           </a>
         </div>
  
-        <div class="col-6 py-1 d-flex flex-column justify-content-between align-items-start">
-          <p class="p-0 m-0 text-muted">{{item.date}}</p>
-          <h3 class="p-0 m-0">{{item.title}}</h3>
+        <div class="col-12 col-md-6 py-1 d-flex flex-column justify-content-between align-items-start">
+          <p class="pb-2 p-md-0 m-0 text-muted">{{item.date}}</p>
+          <h3 class="pb-2 p-md-0 m-0">{{item.title}}</h3>
           <p class="p-0 m-0">{{item.category}}</p>
         </div>
       </div>
@@ -111,13 +111,16 @@ export default {
 #card .img-text-scale-medium{
   bottom: 0;
 }
-@media screen and (max-width: 600px) {
-  .image {
-    height: 25vh;
-    object-fit: fill !important;
-    object-position: 50% 50%  !important;
-   
-  }
-}
+
+
+
+@media (min-width: 576px) { }
+
+
+@media (min-width: 768px) {  }
+
+@media (min-width: 992px) {  }
+
+@media (min-width: 1200px) {  }
 
 </style>

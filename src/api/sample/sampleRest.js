@@ -36,7 +36,7 @@ sampleRest.get('/database/getBanner/:id_group', (req, res) => {
   }).catch(err => httpResponseUtils.error(res, err))
 })
 
-sampleRest.get('/database/getPostsView', (req, res) => {
+sampleRest.get('/database/getPostsView/:id_group', (req, res) => {
   let params = {}
 
   if(req.params.id_group !== 'null'){
