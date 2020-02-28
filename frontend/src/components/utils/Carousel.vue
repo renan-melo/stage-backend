@@ -80,7 +80,7 @@ export default {
   
 }
 img{
-object-fit: scale-down;
+object-fit: contain;
    object-position: center;
 }
 .img-main{
@@ -88,7 +88,7 @@ z-index: 2;
 }
 
 .img-shadown{
-    object-fit: fill;
+    object-fit: contain;
     object-position: center;
     transform: scale(2);
     filter: blur(5px);
