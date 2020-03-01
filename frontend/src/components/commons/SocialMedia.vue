@@ -21,7 +21,17 @@ export default {
     data() {
     return{
       media:[
-      {
+         {
+        icon:'github',
+        url:'https://github.com/renan-melo/stage-backend',
+        color:'#4064ad'
+      },
+       {
+        icon:'linkedin',
+        url:'https://www.linkedin.com/in/renan-lucas-a7344119b/',
+        color:'#4064ad'
+      },
+    /*  {
         icon:'facebook',
         url:'https://pt-br.facebook.com/',
         color:'#4064ad'
@@ -37,7 +47,7 @@ export default {
         icon:'instagram',
         url:'https://www.instagram.com/?hl=pt-br',
         color:'#CF3587'
-      },
+      },*/
       ]
     }
     }
@@ -47,7 +57,7 @@ export default {
 <style scoped>
 
    #socialMedia li i{
-       font-size: 16pt;
+       font-size: 24pt;
        color: rgba(255, 255, 255, 0.37);
        transition: transform .2s, color .2s;
    } 

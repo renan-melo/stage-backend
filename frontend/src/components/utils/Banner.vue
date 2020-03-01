@@ -10,8 +10,8 @@
         <h1 class="mb-5 pb-5">{{item.title}}</h1>
      
       <div class="d-flex justify-content-start mb-3">
-          <i class="far fa-clock mr-5"> {{ item.date}}</i>
-           <i class="far fa-bookmark ml-5"> {{item.category}}</i>
+       
+           <i class="far fa-bookmark ml-1"> {{item.category}}</i>
       </div>
     </div> 
     </div>

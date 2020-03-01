@@ -10,10 +10,9 @@
       <div class="carousel-inner h-100">
 
         <div v-for="(item,index) in items" :key="index" :class="'carousel-item h-100 ' + item.class" >
-          <div class="h-100 w-100 d-flex justify-content-center align-content-center">
+          <div class="h-100 d-flex justify-content-center align-content-center">
           <!-- Image 1660 x 800-->
            <img :src="item.src" class="img-main"/>
-            <img :src="item.src" class="img-shadown h-100 w-100 position-absolute "/>
           <div class="carousel-content-title carousel-caption d-none d-md-block ">
             <h3>{{item.title}}</h3>
           </div>
@@ -80,11 +79,16 @@ export default {
   
 }
 img{
-object-fit: contain;
+  max-width: 100%;
+object-fit: cover;
    object-position: center;
 }
 .img-main{
 z-index: 2;
+}
+
+a{
+  z-index: 3;
 }
 
 .img-shadown{

@@ -6,7 +6,7 @@
       
       <a class="navbar-brand ml-4 mx-0 py-3 text-white col-8 col-lg-2 justify-content-flex" href="#"></a>
 
-      <button class="navbar-toggler navbar-dark" type="button " data-toggle="collapse"  data-target="#nav">
+      <button class="navbar-toggler navbar-dark" type="button" ref="back" data-toggle="collapse"  data-target="#nav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -14,7 +14,7 @@
 
         <div class="col-5 col-lg-9">
           <ul class="row p-4 justify-content-between p-0 m-0 ">
-            <li v-for="(item,index) in items"  :key="index" class="nav-item nav-item-link p-0 py-2" @click="activeIndex=false">
+            <li v-for="(item,index) in items"  :key="index" class="nav-item nav-item-link p-0 py-2" @click="backMenu()">
                   <router-link :class="`nav-link link text-left px-0 ${index===activeIndex?'active':''}`" :to="item.path" >{{item.name}}</router-link>
             </li>
           </ul>
@@ -38,6 +38,16 @@ export default {
   name: "NavBar",
   components:{
     SocialMedia
+  },methods:{
+    backMenu(){
+      this.activeIndex=false
+
+      if(this.$refs.back.offsetWidth > 0){
+        this.$refs.back.click()
+      }
+
+
+    }
   },
   data(){
     return{

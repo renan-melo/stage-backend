@@ -37,8 +37,9 @@ export default {
 </script>
 
 <style>
+/* #EAEAEA */
 #app{
-  background: #EAEAEA; 
+  background: rgb(255, 255, 255); 
   overflow: auto;
 }
 </style>

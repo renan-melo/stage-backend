@@ -5,8 +5,8 @@
         <Banner :item="item"/>
     </div>
     <div class="container py-5">
+        <p class="font-italic">{{new Date(item.reg_date).toLocaleDateString()}}</p>  
         <h2 class="h3 font-weight-bold">{{item.title}}</h2>
-        <p class="font-italic">{{item.date}}</p>  
         <div class="row">
             <div class="col-lg-10 mb-4" v-html="item.content">
             </div>
@@ -33,6 +33,13 @@ export default {
     mounted(){
         axios.get(config.URL +'/sample/database/getPost/'+this.$route.params.id).then((response) => {
              this.item = response.data[0] 
+console.log(this.item.reg_date);
+
+             while (this.item.content.indexOf('<img src="h')>-1) {
+                 this.item.content= this.item.content.replace('<img src="h','<img style="max-width: 100%;min-width: 100%;" src="h')
+                 
+             }
+                
              const data = {
                  id:parseInt(this.$route.params.id),
                  qtd_view:this.item.qtd_view + 1
@@ -57,6 +64,10 @@ export default {
 <style scoped>
     .banner{
         height: 60vh;
+    }
+
+    .img-content{
+        max-width: 100%;
     }
 
 </style>
