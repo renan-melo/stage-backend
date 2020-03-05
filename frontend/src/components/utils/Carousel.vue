@@ -58,11 +58,10 @@ export default {
               if(index === 0){
                 banner.class='active'
               }
-
+              banner.src = require(`../../assets/img/Banner/${banner.id}.jpg`)
             this.items.push(banner)
 
           });
-
             })  
     },
 }

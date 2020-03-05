@@ -33,7 +33,7 @@ export default {
     mounted(){
         axios.get(config.URL +'/sample/database/getPost/'+this.$route.params.id).then((response) => {
              this.item = response.data[0] 
-console.log(this.item.reg_date);
+             this.item.img_banner = require(`../../assets/img/Banner/${this.item.id}.jpg`)
 
              while (this.item.content.indexOf('<img src="h')>-1) {
                  this.item.content= this.item.content.replace('<img src="h','<img style="max-width: 100%;min-width: 100%;" src="h')

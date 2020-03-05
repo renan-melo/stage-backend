@@ -1,4 +1,4 @@
-select ti.img_banner as src,tp.title from tab_img ti
+select tp.id as id,ti.img_banner as src,tp.title from tab_img ti
 inner join tab_post tp on ti.id_post = tp.id
 {{#id_group}}
 inner join tab_category tc on tp.id_category = tc.id

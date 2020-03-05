@@ -31,11 +31,12 @@ export default {
                return{
                 id:item.id,
                 date:new Date(item.reg_date).toLocaleDateString(),
-                img_card:item.img_card,
+                img_card:require(`../../assets/img/Card/${item.id}.jpg`),
                 title:item.title,
                 path: '/content/'+item.id
                }
              }) 
+             
       })
   },
     components:{
